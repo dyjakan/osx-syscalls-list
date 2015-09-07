@@ -1,0 +1,1826 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>OS X MACH Traps Reference</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container-fluid">
+<h1>OS X MACH Traps Reference</h1>
+<p>Generated from <i><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/">XNU-2782.1.97/</a></i> on <i>Friday, 13 March 2015</i> by <a href="https://twitter.com/dyjakan">@dyjakan</a>.</p>
+<p>Feedback, ideas, bugs, <i>et cetera</i> &#8211; <a href="http://dyjakan.sigsegv.pl/pages/about.html">give me a shout</a>.</p>
+<small>
+	<table class="table table-condensed table-hover">
+	<tr class="active">
+		<th>#</th>
+		<th>Name</th>
+		<th>arg 1</th>
+		<th>arg 2</th>
+		<th>arg 3</th>
+		<th>arg 4</th>
+		<th>arg 5</th>
+		<th>arg 6</th>
+		<th>arg 7</th>
+		<th>arg 8</th>
+		<th>Munger</th>
+		<th>Source</th>
+	</tr>
+	<tr>
+		<td>0</td>
+		<td>kern_return_t <b>kern_invalid</b></td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/kern/syscall_sw.c">osfmk/kern/syscall_sw.c</a></td>
+	</tr>
+	<tr>
+		<td>1</td>
+		<td>kern_return_t <b>kern_invalid</b></td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/kern/syscall_sw.c">osfmk/kern/syscall_sw.c</a></td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>kern_return_t <b>kern_invalid</b></td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/kern/syscall_sw.c">osfmk/kern/syscall_sw.c</a></td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td>kern_return_t <b>kern_invalid</b></td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/kern/syscall_sw.c">osfmk/kern/syscall_sw.c</a></td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td>kern_return_t <b>kern_invalid</b></td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/kern/syscall_sw.c">osfmk/kern/syscall_sw.c</a></td>
+	</tr>
+	<tr>
+		<td>5</td>
+		<td>kern_return_t <b>kern_invalid</b></td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/kern/syscall_sw.c">osfmk/kern/syscall_sw.c</a></td>
+	</tr>
+	<tr>
+		<td>6</td>
+		<td>kern_return_t <b>kern_invalid</b></td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/kern/syscall_sw.c">osfmk/kern/syscall_sw.c</a></td>
+	</tr>
+	<tr>
+		<td>7</td>
+		<td>kern_return_t <b>kern_invalid</b></td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/kern/syscall_sw.c">osfmk/kern/syscall_sw.c</a></td>
+	</tr>
+	<tr>
+		<td>8</td>
+		<td>kern_return_t <b>kern_invalid</b></td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/kern/syscall_sw.c">osfmk/kern/syscall_sw.c</a></td>
+	</tr>
+	<tr>
+		<td>9</td>
+		<td>kern_return_t <b>kern_invalid</b></td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/kern/syscall_sw.c">osfmk/kern/syscall_sw.c</a></td>
+	</tr>
+	<tr>
+		<td>10</td>
+		<td>kern_return_t <b>_kernelrpc_mach_vm_allocate_trap</b></td>
+		<td>mach_port_name_t target</td>
+		<td>mach_vm_offset_t *addr</td>
+		<td>mach_vm_size_t size</td>
+		<td>int flags</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>munge_wwlw</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/ipc/mach_kernelrpc.c">osfmk/ipc/mach_kernelrpc.c</a></td>
+	</tr>
+	<tr>
+		<td>11</td>
+		<td>kern_return_t <b>kern_invalid</b></td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/kern/syscall_sw.c">osfmk/kern/syscall_sw.c</a></td>
+	</tr>
+	<tr>
+		<td>12</td>
+		<td>kern_return_t <b>_kernelrpc_mach_vm_deallocate_trap</b></td>
+		<td>mach_port_name_t target</td>
+		<td>mach_vm_address_t address</td>
+		<td>mach_vm_size_t size</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>munge_wll</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/ipc/mach_kernelrpc.c">osfmk/ipc/mach_kernelrpc.c</a></td>
+	</tr>
+	<tr>
+		<td>13</td>
+		<td>kern_return_t <b>kern_invalid</b></td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/kern/syscall_sw.c">osfmk/kern/syscall_sw.c</a></td>
+	</tr>
+	<tr>
+		<td>14</td>
+		<td>kern_return_t <b>_kernelrpc_mach_vm_protect_trap</b></td>
+		<td>mach_port_name_t target</td>
+		<td>mach_vm_address_t address</td>
+		<td>mach_vm_size_t size</td>
+		<td>boolean_t set_maximum</td>
+		<td>vm_prot_t new_protection</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>munge_wllww</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/ipc/mach_kernelrpc.c">osfmk/ipc/mach_kernelrpc.c</a></td>
+	</tr>
+	<tr>
+		<td>15</td>
+		<td>kern_return_t <b>_kernelrpc_mach_vm_map_trap</b></td>
+		<td>mach_port_name_t target</td>
+		<td>mach_vm_offset_t *address</td>
+		<td>mach_vm_size_t size</td>
+		<td>mach_vm_offset_t mask</td>
+		<td>int flags</td>
+		<td>vm_prot_t cur_protection</td>
+		<td>-</td>
+		<td>-</td>
+		<td>munge_wwllww</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/ipc/mach_kernelrpc.c">osfmk/ipc/mach_kernelrpc.c</a></td>
+	</tr>
+	<tr>
+		<td>16</td>
+		<td>kern_return_t <b>_kernelrpc_mach_port_allocate_trap</b></td>
+		<td>mach_port_name_t target</td>
+		<td>mach_port_right_t right</td>
+		<td>mach_port_name_t *name</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>munge_www</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/ipc/mach_kernelrpc.c">osfmk/ipc/mach_kernelrpc.c</a></td>
+	</tr>
+	<tr>
+		<td>17</td>
+		<td>kern_return_t <b>_kernelrpc_mach_port_destroy_trap</b></td>
+		<td>mach_port_name_t target</td>
+		<td>mach_port_name_t name</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>munge_ww</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/ipc/mach_kernelrpc.c">osfmk/ipc/mach_kernelrpc.c</a></td>
+	</tr>
+	<tr>
+		<td>18</td>
+		<td>kern_return_t <b>_kernelrpc_mach_port_deallocate_trap</b></td>
+		<td>mach_port_name_t target</td>
+		<td>mach_port_name_t name</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>munge_ww</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/ipc/mach_kernelrpc.c">osfmk/ipc/mach_kernelrpc.c</a></td>
+	</tr>
+	<tr>
+		<td>19</td>
+		<td>kern_return_t <b>_kernelrpc_mach_port_mod_refs_trap</b></td>
+		<td>mach_port_name_t target</td>
+		<td>mach_port_name_t name</td>
+		<td>mach_port_right_t right</td>
+		<td>mach_port_delta_t delta</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>munge_wwww</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/ipc/mach_kernelrpc.c">osfmk/ipc/mach_kernelrpc.c</a></td>
+	</tr>
+	<tr>
+		<td>20</td>
+		<td>kern_return_t <b>_kernelrpc_mach_port_move_member_trap</b></td>
+		<td>mach_port_name_t target</td>
+		<td>mach_port_name_t member</td>
+		<td>mach_port_name_t after</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>munge_www</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/ipc/mach_kernelrpc.c">osfmk/ipc/mach_kernelrpc.c</a></td>
+	</tr>
+	<tr>
+		<td>21</td>
+		<td>kern_return_t <b>_kernelrpc_mach_port_insert_right_trap</b></td>
+		<td>mach_port_name_t target</td>
+		<td>mach_port_name_t name</td>
+		<td>mach_port_name_t poly</td>
+		<td>mach_msg_type_name_t polyPoly</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>munge_wwww</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/ipc/mach_kernelrpc.c">osfmk/ipc/mach_kernelrpc.c</a></td>
+	</tr>
+	<tr>
+		<td>22</td>
+		<td>kern_return_t <b>_kernelrpc_mach_port_insert_member_trap</b></td>
+		<td>mach_port_name_t target</td>
+		<td>mach_port_name_t name</td>
+		<td>mach_port_name_t pset</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>munge_www</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/ipc/mach_kernelrpc.c">osfmk/ipc/mach_kernelrpc.c</a></td>
+	</tr>
+	<tr>
+		<td>23</td>
+		<td>kern_return_t <b>_kernelrpc_mach_port_extract_member_trap</b></td>
+		<td>mach_port_name_t target</td>
+		<td>mach_port_name_t name</td>
+		<td>mach_port_name_t pset</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>munge_www</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/ipc/mach_kernelrpc.c">osfmk/ipc/mach_kernelrpc.c</a></td>
+	</tr>
+	<tr>
+		<td>24</td>
+		<td>kern_return_t <b>_kernelrpc_mach_port_construct_trap</b></td>
+		<td>mach_port_name_t target</td>
+		<td>mach_port_options_t *options</td>
+		<td>uint64_t context</td>
+		<td>mach_port_name_t *name</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>munge_wwlw</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/ipc/mach_kernelrpc.c">osfmk/ipc/mach_kernelrpc.c</a></td>
+	</tr>
+	<tr>
+		<td>25</td>
+		<td>kern_return_t <b>_kernelrpc_mach_port_destruct_trap</b></td>
+		<td>mach_port_name_t target</td>
+		<td>mach_port_name_t name</td>
+		<td>mach_port_delta_t srdelta</td>
+		<td>uint64_t guard</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>munge_wwwl</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/ipc/mach_kernelrpc.c">osfmk/ipc/mach_kernelrpc.c</a></td>
+	</tr>
+	<tr>
+		<td>26</td>
+		<td>mach_port_name_t <b>mach_reply_port</b></td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/kern/ipc_tt.c">osfmk/kern/ipc_tt.c</a></td>
+	</tr>
+	<tr>
+		<td>27</td>
+		<td>mach_port_name_t <b>thread_self_trap</b></td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/kern/ipc_tt.c">osfmk/kern/ipc_tt.c</a></td>
+	</tr>
+	<tr>
+		<td>28</td>
+		<td>mach_port_name_t <b>task_self_trap</b></td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/kern/ipc_tt.c">osfmk/kern/ipc_tt.c</a></td>
+	</tr>
+	<tr>
+		<td>29</td>
+		<td>mach_port_name_t <b>host_self_trap</b></td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/kern/ipc_host.c">osfmk/kern/ipc_host.c</a></td>
+	</tr>
+	<tr>
+		<td>30</td>
+		<td>kern_return_t <b>kern_invalid</b></td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/kern/syscall_sw.c">osfmk/kern/syscall_sw.c</a></td>
+	</tr>
+	<tr>
+		<td>31</td>
+		<td>mach_msg_return_t <b>mach_msg_trap</b></td>
+		<td>mach_msg_header_t *msg</td>
+		<td>mach_msg_option_t option</td>
+		<td>mach_msg_size_t send_size</td>
+		<td>mach_msg_size_t rcv_size</td>
+		<td>mach_port_name_t rcv_name</td>
+		<td>mach_msg_timeout_t timeout</td>
+		<td>mach_port_name_t notify</td>
+		<td>-</td>
+		<td>munge_wwwwwww</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/ipc/mach_msg.c">osfmk/ipc/mach_msg.c</a></td>
+	</tr>
+	<tr>
+		<td>32</td>
+		<td>mach_msg_return_t <b>mach_msg_overwrite_trap</b></td>
+		<td>mach_msg_header_t *msg</td>
+		<td>mach_msg_option_t option</td>
+		<td>mach_msg_size_t send_size</td>
+		<td>mach_msg_size_t rcv_size</td>
+		<td>mach_port_name_t rcv_name</td>
+		<td>mach_msg_timeout_t timeout</td>
+		<td>mach_port_name_t notify</td>
+		<td>mach_msg_header_t *rcv_msg</td>
+		<td>munge_wwwwwwww</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/ipc/mach_msg.c">osfmk/ipc/mach_msg.c</a></td>
+	</tr>
+	<tr>
+		<td>33</td>
+		<td>kern_return_t <b>semaphore_signal_trap</b></td>
+		<td>mach_port_name_t signal_name</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>munge_w</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/kern/sync_sema.c">osfmk/kern/sync_sema.c</a></td>
+	</tr>
+	<tr>
+		<td>34</td>
+		<td>kern_return_t <b>semaphore_signal_all_trap</b></td>
+		<td>mach_port_name_t signal_name</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>munge_w</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/kern/sync_sema.c">osfmk/kern/sync_sema.c</a></td>
+	</tr>
+	<tr>
+		<td>35</td>
+		<td>kern_return_t <b>semaphore_signal_thread_trap</b></td>
+		<td>mach_port_name_t signal_name</td>
+		<td>mach_port_name_t thread_name</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>munge_ww</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/kern/sync_sema.c">osfmk/kern/sync_sema.c</a></td>
+	</tr>
+	<tr>
+		<td>36</td>
+		<td>kern_return_t <b>semaphore_wait_trap</b></td>
+		<td>mach_port_name_t wait_name</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>munge_w</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/kern/sync_sema.c">osfmk/kern/sync_sema.c</a></td>
+	</tr>
+	<tr>
+		<td>37</td>
+		<td>kern_return_t <b>semaphore_wait_signal_trap</b></td>
+		<td>mach_port_name_t wait_name</td>
+		<td>mach_port_name_t signal_name</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>munge_ww</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/kern/sync_sema.c">osfmk/kern/sync_sema.c</a></td>
+	</tr>
+	<tr>
+		<td>38</td>
+		<td>kern_return_t <b>semaphore_timedwait_trap</b></td>
+		<td>mach_port_name_t wait_name</td>
+		<td>unsigned int sec</td>
+		<td>clock_res_t nsec</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>munge_www</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/kern/sync_sema.c">osfmk/kern/sync_sema.c</a></td>
+	</tr>
+	<tr>
+		<td>39</td>
+		<td>kern_return_t <b>semaphore_timedwait_signal_trap</b></td>
+		<td>mach_port_name_t wait_name</td>
+		<td>mach_port_name_t signal_name</td>
+		<td>unsigned int sec</td>
+		<td>clock_res_t nsec</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>munge_wwww</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/kern/sync_sema.c">osfmk/kern/sync_sema.c</a></td>
+	</tr>
+	<tr>
+		<td>40</td>
+		<td>kern_return_t <b>kern_invalid</b></td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/kern/syscall_sw.c">osfmk/kern/syscall_sw.c</a></td>
+	</tr>
+	<tr>
+		<td>41</td>
+		<td>kern_return_t <b>_kernelrpc_mach_port_guard_trap</b></td>
+		<td>mach_port_name_t target</td>
+		<td>mach_port_name_t name</td>
+		<td>uint64_t guard</td>
+		<td>boolean_t strict</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>munge_wwlw</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/ipc/mach_kernelrpc.c">osfmk/ipc/mach_kernelrpc.c</a></td>
+	</tr>
+	<tr>
+		<td>42</td>
+		<td>kern_return_t <b>_kernelrpc_mach_port_unguard_trap</b></td>
+		<td>mach_port_name_t target</td>
+		<td>mach_port_name_t name</td>
+		<td>uint64_t guard</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>munge_wwl</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/ipc/mach_kernelrpc.c">osfmk/ipc/mach_kernelrpc.c</a></td>
+	</tr>
+	<tr>
+		<td>43</td>
+		<td>kern_return_t <b>kern_invalid</b></td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/kern/syscall_sw.c">osfmk/kern/syscall_sw.c</a></td>
+	</tr>
+	<tr>
+		<td>44</td>
+		<td>kern_return_t <b>task_name_for_pid</b></td>
+		<td>mach_port_name_t target_tport</td>
+		<td>int pid</td>
+		<td>mach_port_name_t *tn</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>munge_www</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/bsd/vm/vm_unix.c">bsd/vm/vm_unix.c</a></td>
+	</tr>
+	<tr>
+		<td>45</td>
+		<td>kern_return_t <b>task_for_pid</b></td>
+		<td>mach_port_name_t target_tport</td>
+		<td>int pid</td>
+		<td>mach_port_name_t *t</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>munge_www</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/bsd/vm/vm_unix.c">bsd/vm/vm_unix.c</a></td>
+	</tr>
+	<tr>
+		<td>46</td>
+		<td>kern_return_t <b>pid_for_task</b></td>
+		<td>mach_port_name_t t</td>
+		<td>int *x</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>munge_ww</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/bsd/vm/vm_unix.c">bsd/vm/vm_unix.c</a></td>
+	</tr>
+	<tr>
+		<td>47</td>
+		<td>kern_return_t <b>kern_invalid</b></td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/kern/syscall_sw.c">osfmk/kern/syscall_sw.c</a></td>
+	</tr>
+	<tr>
+		<td>48</td>
+		<td>kern_return_t <b>macx_swapon</b></td>
+		<td>uint64_t filename</td>
+		<td>int flags</td>
+		<td>int size</td>
+		<td>int priority</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>munge_lwww</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/bsd/vm/dp_backing_file.c">bsd/vm/dp_backing_file.c</a></td>
+	</tr>
+	<tr>
+		<td>49</td>
+		<td>kern_return_t <b>macx_swapoff</b></td>
+		<td>uint64_t filename</td>
+		<td>int flags</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>munge_lw</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/bsd/vm/dp_backing_file.c">bsd/vm/dp_backing_file.c</a></td>
+	</tr>
+	<tr>
+		<td>50</td>
+		<td>kern_return_t <b>kern_invalid</b></td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/kern/syscall_sw.c">osfmk/kern/syscall_sw.c</a></td>
+	</tr>
+	<tr>
+		<td>51</td>
+		<td>kern_return_t <b>macx_triggers</b></td>
+		<td>int hi_water</td>
+		<td>int low_water</td>
+		<td>int flags</td>
+		<td>mach_port_t alert_port</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>munge_wwww</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/bsd/vm/dp_backing_file.c">bsd/vm/dp_backing_file.c</a></td>
+	</tr>
+	<tr>
+		<td>52</td>
+		<td>kern_return_t <b>macx_backing_store_suspend</b></td>
+		<td>boolean_t suspend</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>munge_w</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/bsd/vm/dp_backing_file.c">bsd/vm/dp_backing_file.c</a></td>
+	</tr>
+	<tr>
+		<td>53</td>
+		<td>kern_return_t <b>macx_backing_store_recovery</b></td>
+		<td>int pid</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>munge_w</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/bsd/vm/dp_backing_file.c">bsd/vm/dp_backing_file.c</a></td>
+	</tr>
+	<tr>
+		<td>54</td>
+		<td>kern_return_t <b>kern_invalid</b></td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/kern/syscall_sw.c">osfmk/kern/syscall_sw.c</a></td>
+	</tr>
+	<tr>
+		<td>55</td>
+		<td>kern_return_t <b>kern_invalid</b></td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/kern/syscall_sw.c">osfmk/kern/syscall_sw.c</a></td>
+	</tr>
+	<tr>
+		<td>56</td>
+		<td>kern_return_t <b>kern_invalid</b></td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/kern/syscall_sw.c">osfmk/kern/syscall_sw.c</a></td>
+	</tr>
+	<tr>
+		<td>57</td>
+		<td>kern_return_t <b>kern_invalid</b></td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/kern/syscall_sw.c">osfmk/kern/syscall_sw.c</a></td>
+	</tr>
+	<tr>
+		<td>58</td>
+		<td>kern_return_t <b>pfz_exit</b></td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/kern/syscall_subr.c">osfmk/kern/syscall_subr.c</a></td>
+	</tr>
+	<tr>
+		<td>59</td>
+		<td>boolean_t <b>swtch_pri</b></td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/kern/syscall_subr.c">osfmk/kern/syscall_subr.c</a></td>
+	</tr>
+	<tr>
+		<td>60</td>
+		<td>boolean_t <b>swtch</b></td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/kern/syscall_subr.c">osfmk/kern/syscall_subr.c</a></td>
+	</tr>
+	<tr>
+		<td>61</td>
+		<td>kern_return_t <b>thread_switch</b></td>
+		<td>mach_port_name_t thread_name</td>
+		<td>int option</td>
+		<td>mach_msg_timeout_t option_time</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>munge_www</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/kern/syscall_subr.c">osfmk/kern/syscall_subr.c</a></td>
+	</tr>
+	<tr>
+		<td>62</td>
+		<td>kern_return_t <b>clock_sleep_trap</b></td>
+		<td>mach_port_name_t clock_name</td>
+		<td>sleep_type_t sleep_type</td>
+		<td>int sleep_sec</td>
+		<td>int sleep_nsec</td>
+		<td>mach_timespec_t	*wakeup_time</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>munge_wwwww</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/kern/clock_oldops.c">osfmk/kern/clock_oldops.c</a></td>
+	</tr>
+	<tr>
+		<td>63</td>
+		<td>kern_return_t <b>kern_invalid</b></td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/kern/syscall_sw.c">osfmk/kern/syscall_sw.c</a></td>
+	</tr>
+	<tr>
+		<td>64</td>
+		<td>kern_return_t <b>kern_invalid</b></td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/kern/syscall_sw.c">osfmk/kern/syscall_sw.c</a></td>
+	</tr>
+	<tr>
+		<td>65</td>
+		<td>kern_return_t <b>kern_invalid</b></td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/kern/syscall_sw.c">osfmk/kern/syscall_sw.c</a></td>
+	</tr>
+	<tr>
+		<td>66</td>
+		<td>kern_return_t <b>kern_invalid</b></td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/kern/syscall_sw.c">osfmk/kern/syscall_sw.c</a></td>
+	</tr>
+	<tr>
+		<td>67</td>
+		<td>kern_return_t <b>kern_invalid</b></td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/kern/syscall_sw.c">osfmk/kern/syscall_sw.c</a></td>
+	</tr>
+	<tr>
+		<td>68</td>
+		<td>kern_return_t <b>kern_invalid</b></td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/kern/syscall_sw.c">osfmk/kern/syscall_sw.c</a></td>
+	</tr>
+	<tr>
+		<td>69</td>
+		<td>kern_return_t <b>kern_invalid</b></td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/kern/syscall_sw.c">osfmk/kern/syscall_sw.c</a></td>
+	</tr>
+	<tr>
+		<td>70</td>
+		<td>kern_return_t <b>kern_invalid</b></td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/kern/syscall_sw.c">osfmk/kern/syscall_sw.c</a></td>
+	</tr>
+	<tr>
+		<td>71</td>
+		<td>kern_return_t <b>kern_invalid</b></td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/kern/syscall_sw.c">osfmk/kern/syscall_sw.c</a></td>
+	</tr>
+	<tr>
+		<td>72</td>
+		<td>kern_return_t <b>kern_invalid</b></td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/kern/syscall_sw.c">osfmk/kern/syscall_sw.c</a></td>
+	</tr>
+	<tr>
+		<td>73</td>
+		<td>kern_return_t <b>kern_invalid</b></td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/kern/syscall_sw.c">osfmk/kern/syscall_sw.c</a></td>
+	</tr>
+	<tr>
+		<td>74</td>
+		<td>kern_return_t <b>kern_invalid</b></td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/kern/syscall_sw.c">osfmk/kern/syscall_sw.c</a></td>
+	</tr>
+	<tr>
+		<td>75</td>
+		<td>kern_return_t <b>kern_invalid</b></td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/kern/syscall_sw.c">osfmk/kern/syscall_sw.c</a></td>
+	</tr>
+	<tr>
+		<td>76</td>
+		<td>kern_return_t <b>kern_invalid</b></td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/kern/syscall_sw.c">osfmk/kern/syscall_sw.c</a></td>
+	</tr>
+	<tr>
+		<td>77</td>
+		<td>kern_return_t <b>kern_invalid</b></td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/kern/syscall_sw.c">osfmk/kern/syscall_sw.c</a></td>
+	</tr>
+	<tr>
+		<td>78</td>
+		<td>kern_return_t <b>kern_invalid</b></td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/kern/syscall_sw.c">osfmk/kern/syscall_sw.c</a></td>
+	</tr>
+	<tr>
+		<td>79</td>
+		<td>kern_return_t <b>kern_invalid</b></td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/kern/syscall_sw.c">osfmk/kern/syscall_sw.c</a></td>
+	</tr>
+	<tr>
+		<td>80</td>
+		<td>kern_return_t <b>kern_invalid</b></td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/kern/syscall_sw.c">osfmk/kern/syscall_sw.c</a></td>
+	</tr>
+	<tr>
+		<td>81</td>
+		<td>kern_return_t <b>kern_invalid</b></td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/kern/syscall_sw.c">osfmk/kern/syscall_sw.c</a></td>
+	</tr>
+	<tr>
+		<td>82</td>
+		<td>kern_return_t <b>kern_invalid</b></td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/kern/syscall_sw.c">osfmk/kern/syscall_sw.c</a></td>
+	</tr>
+	<tr>
+		<td>83</td>
+		<td>kern_return_t <b>kern_invalid</b></td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/kern/syscall_sw.c">osfmk/kern/syscall_sw.c</a></td>
+	</tr>
+	<tr>
+		<td>84</td>
+		<td>kern_return_t <b>kern_invalid</b></td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/kern/syscall_sw.c">osfmk/kern/syscall_sw.c</a></td>
+	</tr>
+	<tr>
+		<td>85</td>
+		<td>kern_return_t <b>kern_invalid</b></td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/kern/syscall_sw.c">osfmk/kern/syscall_sw.c</a></td>
+	</tr>
+	<tr>
+		<td>86</td>
+		<td>kern_return_t <b>kern_invalid</b></td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/kern/syscall_sw.c">osfmk/kern/syscall_sw.c</a></td>
+	</tr>
+	<tr>
+		<td>87</td>
+		<td>kern_return_t <b>kern_invalid</b></td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/kern/syscall_sw.c">osfmk/kern/syscall_sw.c</a></td>
+	</tr>
+	<tr>
+		<td>88</td>
+		<td>kern_return_t <b>kern_invalid</b></td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/kern/syscall_sw.c">osfmk/kern/syscall_sw.c</a></td>
+	</tr>
+	<tr>
+		<td>89</td>
+		<td>kern_return_t <b>mach_timebase_info_trap</b></td>
+		<td>user_addr_t info</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>munge_w</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/kern/clock.c">osfmk/kern/clock.c</a></td>
+	</tr>
+	<tr>
+		<td>90</td>
+		<td>kern_return_t <b>mach_wait_until_trap</b></td>
+		<td>uint64_t deadline</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>munge_l</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/kern/clock.c">osfmk/kern/clock.c</a></td>
+	</tr>
+	<tr>
+		<td>91</td>
+		<td>mach_port_name_t <b>mk_timer_create_trap</b></td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/kern/mk_timer.c">osfmk/kern/mk_timer.c</a></td>
+	</tr>
+	<tr>
+		<td>92</td>
+		<td>kern_return_t <b>mk_timer_destroy_trap</b></td>
+		<td>mach_port_name_t name</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>munge_w</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/kern/mk_timer.c">osfmk/kern/mk_timer.c</a></td>
+	</tr>
+	<tr>
+		<td>93</td>
+		<td>kern_return_t <b>mk_timer_arm_trap</b></td>
+		<td>mach_port_name_t name</td>
+		<td>uint64_t expire_time</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>munge_wl</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/kern/mk_timer.c">osfmk/kern/mk_timer.c</a></td>
+	</tr>
+	<tr>
+		<td>94</td>
+		<td>kern_return_t <b>mk_timer_cancel_trap</b></td>
+		<td>mach_port_name_t name</td>
+		<td>user_addr_t result_time</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>munge_ww</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/kern/mk_timer.c">osfmk/kern/mk_timer.c</a></td>
+	</tr>
+	<tr>
+		<td>95</td>
+		<td>kern_return_t <b>kern_invalid</b></td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/kern/syscall_sw.c">osfmk/kern/syscall_sw.c</a></td>
+	</tr>
+	<tr>
+		<td>96</td>
+		<td>kern_return_t <b>kern_invalid</b></td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/kern/syscall_sw.c">osfmk/kern/syscall_sw.c</a></td>
+	</tr>
+	<tr>
+		<td>97</td>
+		<td>kern_return_t <b>kern_invalid</b></td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/kern/syscall_sw.c">osfmk/kern/syscall_sw.c</a></td>
+	</tr>
+	<tr>
+		<td>98</td>
+		<td>kern_return_t <b>kern_invalid</b></td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/kern/syscall_sw.c">osfmk/kern/syscall_sw.c</a></td>
+	</tr>
+	<tr>
+		<td>99</td>
+		<td>kern_return_t <b>kern_invalid</b></td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/kern/syscall_sw.c">osfmk/kern/syscall_sw.c</a></td>
+	</tr>
+	<tr>
+		<td>100</td>
+		<td>kern_return_t <b>iokit_user_client_trap</b></td>
+		<td>void * userClientRef</td>
+		<td>uint32_t index</td>
+		<td>void * p1</td>
+		<td>void * p2</td>
+		<td>void * p3</td>
+		<td>void * p4</td>
+		<td>void * p5</td>
+		<td>void * p6</td>
+		<td>munge_wwwwwwww</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/iokit/Kernel/IOUserClient.cpp">iokit/Kernel/IOUserClient.cpp</a></td>
+	</tr>
+	<tr>
+		<td>101</td>
+		<td>kern_return_t <b>kern_invalid</b></td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/kern/syscall_sw.c">osfmk/kern/syscall_sw.c</a></td>
+	</tr>
+	<tr>
+		<td>102</td>
+		<td>kern_return_t <b>kern_invalid</b></td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/kern/syscall_sw.c">osfmk/kern/syscall_sw.c</a></td>
+	</tr>
+	<tr>
+		<td>103</td>
+		<td>kern_return_t <b>kern_invalid</b></td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/kern/syscall_sw.c">osfmk/kern/syscall_sw.c</a></td>
+	</tr>
+	<tr>
+		<td>104</td>
+		<td>kern_return_t <b>kern_invalid</b></td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/kern/syscall_sw.c">osfmk/kern/syscall_sw.c</a></td>
+	</tr>
+	<tr>
+		<td>105</td>
+		<td>kern_return_t <b>kern_invalid</b></td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/kern/syscall_sw.c">osfmk/kern/syscall_sw.c</a></td>
+	</tr>
+	<tr>
+		<td>106</td>
+		<td>kern_return_t <b>kern_invalid</b></td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/kern/syscall_sw.c">osfmk/kern/syscall_sw.c</a></td>
+	</tr>
+	<tr>
+		<td>107</td>
+		<td>kern_return_t <b>kern_invalid</b></td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/kern/syscall_sw.c">osfmk/kern/syscall_sw.c</a></td>
+	</tr>
+	<tr>
+		<td>108</td>
+		<td>kern_return_t <b>kern_invalid</b></td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/kern/syscall_sw.c">osfmk/kern/syscall_sw.c</a></td>
+	</tr>
+	<tr>
+		<td>109</td>
+		<td>kern_return_t <b>kern_invalid</b></td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/kern/syscall_sw.c">osfmk/kern/syscall_sw.c</a></td>
+	</tr>
+	<tr>
+		<td>110</td>
+		<td>kern_return_t <b>kern_invalid</b></td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/kern/syscall_sw.c">osfmk/kern/syscall_sw.c</a></td>
+	</tr>
+	<tr>
+		<td>111</td>
+		<td>kern_return_t <b>kern_invalid</b></td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/kern/syscall_sw.c">osfmk/kern/syscall_sw.c</a></td>
+	</tr>
+	<tr>
+		<td>112</td>
+		<td>kern_return_t <b>kern_invalid</b></td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/kern/syscall_sw.c">osfmk/kern/syscall_sw.c</a></td>
+	</tr>
+	<tr>
+		<td>113</td>
+		<td>kern_return_t <b>kern_invalid</b></td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/kern/syscall_sw.c">osfmk/kern/syscall_sw.c</a></td>
+	</tr>
+	<tr>
+		<td>114</td>
+		<td>kern_return_t <b>kern_invalid</b></td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/kern/syscall_sw.c">osfmk/kern/syscall_sw.c</a></td>
+	</tr>
+	<tr>
+		<td>115</td>
+		<td>kern_return_t <b>kern_invalid</b></td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/kern/syscall_sw.c">osfmk/kern/syscall_sw.c</a></td>
+	</tr>
+	<tr>
+		<td>116</td>
+		<td>kern_return_t <b>kern_invalid</b></td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/kern/syscall_sw.c">osfmk/kern/syscall_sw.c</a></td>
+	</tr>
+	<tr>
+		<td>117</td>
+		<td>kern_return_t <b>kern_invalid</b></td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/kern/syscall_sw.c">osfmk/kern/syscall_sw.c</a></td>
+	</tr>
+	<tr>
+		<td>118</td>
+		<td>kern_return_t <b>kern_invalid</b></td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/kern/syscall_sw.c">osfmk/kern/syscall_sw.c</a></td>
+	</tr>
+	<tr>
+		<td>119</td>
+		<td>kern_return_t <b>kern_invalid</b></td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/kern/syscall_sw.c">osfmk/kern/syscall_sw.c</a></td>
+	</tr>
+	<tr>
+		<td>120</td>
+		<td>kern_return_t <b>kern_invalid</b></td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/kern/syscall_sw.c">osfmk/kern/syscall_sw.c</a></td>
+	</tr>
+	<tr>
+		<td>121</td>
+		<td>kern_return_t <b>kern_invalid</b></td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/kern/syscall_sw.c">osfmk/kern/syscall_sw.c</a></td>
+	</tr>
+	<tr>
+		<td>122</td>
+		<td>kern_return_t <b>kern_invalid</b></td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/kern/syscall_sw.c">osfmk/kern/syscall_sw.c</a></td>
+	</tr>
+	<tr>
+		<td>123</td>
+		<td>kern_return_t <b>kern_invalid</b></td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/kern/syscall_sw.c">osfmk/kern/syscall_sw.c</a></td>
+	</tr>
+	<tr>
+		<td>124</td>
+		<td>kern_return_t <b>kern_invalid</b></td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/kern/syscall_sw.c">osfmk/kern/syscall_sw.c</a></td>
+	</tr>
+	<tr>
+		<td>125</td>
+		<td>kern_return_t <b>kern_invalid</b></td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/kern/syscall_sw.c">osfmk/kern/syscall_sw.c</a></td>
+	</tr>
+	<tr>
+		<td>126</td>
+		<td>kern_return_t <b>kern_invalid</b></td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/kern/syscall_sw.c">osfmk/kern/syscall_sw.c</a></td>
+	</tr>
+	<tr>
+		<td>127</td>
+		<td>kern_return_t <b>kern_invalid</b></td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td><a href="http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/osfmk/kern/syscall_sw.c">osfmk/kern/syscall_sw.c</a></td>
+	</tr>
+	</table>
+</small>
+</div>
+</body>
+</html>
