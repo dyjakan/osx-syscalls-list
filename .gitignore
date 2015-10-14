@@ -1,3 +1,4 @@
+.gitignore
 .DS*
 tags
 osx-bsd-syscalls.html
