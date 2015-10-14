@@ -13,20 +13,19 @@ def mach_list_generate():
 	mach_traps = []
 
 	# Opening up the declaration file for MACH traps and performing parsing voodoo
-	fd = open(PATH_MACH_TRAPS, "r+b")
-	for line in fd.readlines():
-		entry = []
-		line = line.strip()
+	with open(PATH_MACH_TRAPS, "r+b") as fd:
+		for line in fd.readlines():
+			entry = []
+			line = line.strip()
 
-		if line.find("\tMACH_TRAP(") != -1:
-			elems = line.split()
-			entry.append(elems[1])
-			entry.append(elems[3].replace("MACH_TRAP(", '').replace(',', ''))
-			entry.append(elems[4].replace(',', ''))
-			entry.append(elems[5].replace(',', ''))
-			entry.append(elems[6].replace("),", ''))
-			mach_traps.append(entry)
-	fd.close()
+			if line.find("\tMACH_TRAP(") != -1:
+				elems = line.split()
+				entry.append(elems[1])
+				entry.append(elems[3].replace("MACH_TRAP(", '').replace(',', ''))
+				entry.append(elems[4].replace(',', ''))
+				entry.append(elems[5].replace(',', ''))
+				entry.append(elems[6].replace("),", ''))
+				mach_traps.append(entry)
 	
 	'''
 	for el in mach_traps:
@@ -53,31 +52,29 @@ def determine_highest_num_args():
 def determine_trap_rettype():
 	print "[+] Pulling out return types for each trap"
 
-	fd = open(PATH_MACH_TRAPS_ARGS, "r+b")
-	for i, elem in enumerate(mach_traps_list):
+	with open(PATH_MACH_TRAPS_ARGS, "r+b") as fd:
+		for i, elem in enumerate(mach_traps_list):
 
-		#print '\n' + elem[1]
+			#print '\n' + elem[1]
 
-		for line in fd.readlines():
-			line = line.strip()
+			for line in fd.readlines():
+				line = line.strip()
 
-			if line.find(elem[1]+'(') != -1:
-				line = line.split(' ')
+				if line.find(elem[1]+'(') != -1:
+					line = line.split(' ')
 
-				# little heuristics because they screw-up with new-lines
-				# e.g. line for iokit_user_client_trap has only 2 elemes (_all_ others have 3!)
-				if line[1].replace('(', '') == elem[1]:
-					arg = line[0]
-					#print '\t' + line[0] + ' ' + line[1]
-				else:
-					arg = line[1]
-					#print '\t' + line[1] + ' ' + line[2]
+					# little heuristics because they screw-up with new-lines
+					# e.g. line for iokit_user_client_trap has only 2 elemes (_all_ others have 3!)
+					if line[1].replace('(', '') == elem[1]:
+						arg = line[0]
+						#print '\t' + line[0] + ' ' + line[1]
+					else:
+						arg = line[1]
+						#print '\t' + line[1] + ' ' + line[2]
 
-				mach_traps_list[i].insert(1, arg)
+					mach_traps_list[i].insert(1, arg)
 
-		fd.seek(0)
-
-	fd.close()
+			fd.seek(0)
 
 	'''
 	for el in mach_traps_list:
@@ -94,11 +91,11 @@ def determine_trap_args():
 
 	# Reading-in file line by line for further processing
 	mach_traps_args = []
-	fd = open(PATH_MACH_TRAPS_ARGS, "r+b")
-	for line in fd.readlines():
-		line = line.strip()
-		mach_traps_args.append(line)
-	fd.close()
+
+	with open(PATH_MACH_TRAPS_ARGS, "r+b") as fd:
+		for line in fd.readlines():
+			line = line.strip()
+			mach_traps_args.append(line)
 
 	for i, elem in enumerate(mach_traps_list):
 
