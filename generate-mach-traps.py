@@ -4,10 +4,10 @@ import os
 import sys
 import string
 import datetime
-
+import json
 
 # Generating list of MACH traps
-# [number, name, arg_count, num_32_bit_words, munger]
+# [number, return type, name, number of args, number of 32bit words (related to munger), args...n, munger, source]
 def mach_list_generate():
 	print "[+] Generating mach-traps list data structure"
 	mach_traps = []
@@ -92,7 +92,7 @@ def determine_trap_rettype():
 def determine_trap_args():
 	print "[+] Enumerating arguments for each trap"
 
-	# Reading-in file line by line forfurther processing
+	# Reading-in file line by line for further processing
 	mach_traps_args = []
 	fd = open(PATH_MACH_TRAPS_ARGS, "r+b")
 	for line in fd.readlines():
@@ -188,6 +188,14 @@ def make_traps_file_xrefs():
 
 	print "\tdone"
 
+def generate_json():
+	print "[+] Generating JSON file..."
+
+	with open(OUTPUT_JSON, 'w') as fd:
+		json.dump(mach_traps_list, fd, indent=4)
+
+	print "\tdone"
+
 def generate_html():
 	print "[+] Generating HTML output..."
 
@@ -197,7 +205,7 @@ def generate_html():
 <head>
     <meta charset="utf-8">
     <title>OS X MACH Traps Reference</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 '''
@@ -228,7 +236,7 @@ def generate_html():
 		html += "\t<tr>\n"
 
 		html += "\t\t<td>" + trap[0] + "</td>\n"
-		html += "\t\t<td>" + trap[1] + " <b>" + trap[2] + "</b></td>\n"
+		html += "\t\t<td>" + trap[1] + " <b>" + trap[2].replace('_trap', '') + "</b></td>\n"
 
 		delta = highest_num_args - int(trap[3])
 
@@ -270,9 +278,9 @@ def generate_html():
 	html += "</div>"
 	html += "\n</body>\n</html>"
 
-	fd = open(PATH_OUTPUT + OUTPUT_HTML, "w+b")
-	fd.write(html)
-	fd.close()
+	with open(OUTPUT_HTML, 'w') as fd:
+		fd.write(html)
+	
 	print "\tdone"
 
 
@@ -294,10 +302,13 @@ def main():
 	# Find implementation file for each trap in XNU source
 	make_traps_file_xrefs()
 
-	# Finally, FFS
+	# Dump mach_traps_list as JSON
+	generate_json()
+
+	# yayks!
 	generate_html()
 
-	print "the end"
+	print "[+] Great success!"
 
 if __name__ == "__main__":
 	if(len(sys.argv) < 2):
@@ -305,12 +316,12 @@ if __name__ == "__main__":
 		sys.exit(1)
 
 	PATH_XNU_SOURCE = sys.argv[1]
-	URL_XNU_SOURCE = "http://www.opensource.apple.com/source/xnu/xnu-2782.1.97/"
-	PATH_EXUBERANT_CTAGS = "/usr/local/Cellar/ctags/5.8/bin/ctags"
+	URL_XNU_SOURCE = "http://www.opensource.apple.com/source/xnu/xnu-2782.40.9/"
+	PATH_EXUBERANT_CTAGS = "/usr/local/Cellar/ctags/5.8_1/bin/ctags"
 	PATH_MACH_TRAPS = PATH_XNU_SOURCE + "osfmk/kern/syscall_sw.c"
 	PATH_MACH_TRAPS_ARGS = PATH_XNU_SOURCE + "osfmk/mach/mach_traps.h"
-	PATH_OUTPUT = "osx-mach-traps/"
-	OUTPUT_HTML = "index.html"
+	OUTPUT_JSON = "osx-mach-traps.json"
+	OUTPUT_HTML = "osx-mach-traps.html"
 
 	# mention: timestamp, original list from XNU sources, name/handle/email
 	BANNER = "<h1>OS X MACH Traps Reference</h1>\n"
@@ -318,6 +329,8 @@ if __name__ == "__main__":
 	v2 = datetime.datetime.now().strftime("%A, %d %B %Y")
 	twitter = "<a href=\"https://twitter.com/dyjakan\">@dyjakan</a>"
 	BANNER += "<p>Generated from <i><a href=\"" + URL_XNU_SOURCE + "\">" + v1.upper() + "</a></i> on <i>" + v2 + "</i> by " + twitter + ".</p>\n"
+	BANNER += "<p>Description for <a href=\"osx-mach-traps.json\">JSON dump</a> elements:</p>"
+	BANNER += "<pre>[\n\ttrap number,\n\treturn type,\n\ttrap name,\n\tnumber of args,\n\thow wide argument structure is (in 32-bit words; it's related to munger),\n\targ 1, ..., arg n,\n\tmunger,\n\tsource\n]</pre>"
 	BANNER += "<p>Feedback, ideas, bugs, <i>et cetera</i> &#8211; <a href=\"http://dyjakan.sigsegv.pl/pages/about.html\">give me a shout</a>.</p>\n"
 
 	main()
