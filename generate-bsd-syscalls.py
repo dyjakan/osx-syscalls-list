@@ -62,6 +62,7 @@ def bsd_list_generate():
 			syscall_matrix.append(entry)
 			continue
 
+		line = line.replace(" (", "(")
 		elems = line.split()
 
 		# Syscall ID
@@ -123,10 +124,11 @@ def bsd_list_generate():
 
 		syscall_matrix.append(entry)
 
-	"""
+	'''
 	for entry in syscall_matrix:
 		print entry
-	"""
+	sys.exit()
+	'''
 
 	# Clean-up
 	cmd = "rm " + PATH_BSD_TEMP_FILE
@@ -320,7 +322,7 @@ if __name__ == "__main__":
 		sys.exit(1)
 
 	PATH_XNU_SOURCE = sys.argv[1]
-	URL_XNU_SOURCE = "http://www.opensource.apple.com/source/xnu/xnu-2782.40.9/"
+	URL_XNU_SOURCE = "http://www.opensource.apple.com/source/xnu/xnu-3248.20.55/"
 	PATH_EXUBERANT_CTAGS = "/usr/local/Cellar/ctags/5.8_1/bin/ctags"
 	PATH_BSD_SYSCALLS = PATH_XNU_SOURCE + "bsd/kern/syscalls.master"
 	PATH_BSD_TEMP_FILE = "/tmp/bsd-syscall-tmp"
