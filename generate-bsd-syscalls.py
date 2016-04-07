@@ -333,10 +333,10 @@ if __name__ == "__main__":
 	BANNER = "<h1>OS X BSD System Calls Reference</h1>\n"
 	v1 = PATH_XNU_SOURCE[PATH_XNU_SOURCE.find("xnu-"):]
 	v2 = datetime.datetime.now().strftime("%A, %d %B %Y")
-	twitter = "<a href=\"https://twitter.com/dyjakan\">@dyjakan</a>"
-	BANNER += "<p>Generated from <i><a href=\"" + URL_XNU_SOURCE + "\">" + v1.upper() + "</a></i> on <i>" + v2 + "</i> by " + twitter + ".</p>\n"
+	github = "<a href=\"https://github.com/dyjakan\">@dyjakan</a>"
+	BANNER += "<p>Generated from <i><a href=\"" + URL_XNU_SOURCE + "\">" + v1.upper() + "</a></i> on <i>" + v2 + "</i> by " + github + ".</p>\n"
 	BANNER += "<p>Description for <a href=\"osx-bsd-syscalls.json\">JSON dump</a> elements (apart from <i>conditionals</i>):</p>"
 	BANNER += "<pre>[\n\tsyscall number,\n\treturn type,\n\tsyscall name,\n\tnumber of args,\n\targ 1, ..., arg n,\n\tsource\n]</pre>"
-	BANNER += "<p>Feedback, ideas, bugs, <i>et cetera</i> &#8211; <a href=\"http://dyjakan.sigsegv.pl/pages/about.html\">give me a shout</a>.</p>\n"
+	BANNER += "<p>Feedback, ideas, bugs, <i>et cetera</i> &#8211; <a href=\"https://dyjakan.sigsegv.pl/pages/about.html\">give me a shout</a>.</p>\n"
 
 	main()
