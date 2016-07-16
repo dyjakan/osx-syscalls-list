@@ -26,7 +26,7 @@ def mach_list_generate():
 				entry.append(elems[5].replace(',', ''))
 				entry.append(elems[6].replace("),", ''))
 				mach_traps.append(entry)
-	
+
 	'''
 	for el in mach_traps:
 		print el
@@ -111,7 +111,7 @@ def determine_trap_args():
 
 		for j, line in enumerate(mach_traps_args):
 			if line.find(elem[2] + '(') != -1 or line.find(elem[2] + "_args {") != -1:
-				
+
 				# Heuristics for usless lines like "<syscall>(void)" etc
 				if line.find(')') != -1:
 					continue
@@ -143,7 +143,7 @@ def determine_trap_args():
 
 
 				# This break is ingenious. Some traps have both extern and struct with arguments
-				# So we're dealing with it here, since either struct or extern suffices for our 
+				# So we're dealing with it here, since either struct or extern suffices for our
 				# purposes; after we pull out arguments from either one we are breaking!
 				break
 
@@ -156,7 +156,7 @@ def determine_trap_args():
 
 def make_traps_file_xrefs():
 	print "[+] Generating tags file for " + PATH_XNU_SOURCE
-	
+
 	# Stage 0: Generate tags for XNU source
 	cmd = PATH_EXUBERANT_CTAGS + " -R " + PATH_XNU_SOURCE
 	os.system(cmd)
@@ -277,7 +277,7 @@ def generate_html():
 
 	with open(OUTPUT_HTML, 'w') as fd:
 		fd.write(html)
-	
+
 	print "\tdone"
 
 
@@ -313,7 +313,7 @@ if __name__ == "__main__":
 		sys.exit(1)
 
 	PATH_XNU_SOURCE = sys.argv[1]
-	URL_XNU_SOURCE = "http://www.opensource.apple.com/source/xnu/xnu-3248.20.55/"
+	URL_XNU_SOURCE = "http://opensource.apple.com/source/xnu/xnu-3248.40.184/"
 	PATH_EXUBERANT_CTAGS = "/usr/local/Cellar/ctags/5.8_1/bin/ctags"
 	PATH_MACH_TRAPS = PATH_XNU_SOURCE + "osfmk/kern/syscall_sw.c"
 	PATH_MACH_TRAPS_ARGS = PATH_XNU_SOURCE + "osfmk/mach/mach_traps.h"

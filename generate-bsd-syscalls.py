@@ -18,7 +18,7 @@ def make_temp_bsd():
 	data = data[data.find("0\t"):]  # hacky way to set data ptr to proper field
 									# since first syscall is prepended with '0\t'
 	fdout.write(data)
-	
+
 	fdout.close()
 	fdin.close()
 	print "\tdone"
@@ -30,7 +30,7 @@ def bsd_list_generate():
 	fdin = open(PATH_BSD_TEMP_FILE, "r+b")
 	data = fdin.read()
 	fdin.close()
-	
+
 	# Split data by lines
 	data = string.split(data, '\n')
 
@@ -78,7 +78,7 @@ def bsd_list_generate():
 		# This shit is kinda tricky. For couple of reasons: 1) There _are_
 		# corner cases (e.g. no args), 2) Unknown # of args per syscall, 3)
 		# argument can be more than a tuple e.g. 'struct name arg'
-		# 
+		#
 		i = 5
 		argnum = 0 # we will use it to count number of args
 		arg = "" # we're using it to create each arg
@@ -117,7 +117,7 @@ def bsd_list_generate():
 		# We're adding args from our temporary list
 		for el in tmp:
 			entry.append(el)
-		
+
 		# Strip prepended spaces from syscall's args
 		for i, elem in enumerate(entry):
 			entry[i] = elem.strip()
@@ -133,7 +133,7 @@ def bsd_list_generate():
 	# Clean-up
 	cmd = "rm " + PATH_BSD_TEMP_FILE
 	os.system(cmd)
-	
+
 	print "\tdone"
 	return syscall_matrix
 
@@ -188,7 +188,7 @@ def make_syscall_file_xrefs():
 					data = string.split(line, '\t')
 					#print syscall[2] + ": " + data[0] + " " + data[1]
 					bsd_syscall_list[i].append(data[1].replace(PATH_XNU_SOURCE, URL_XNU_SOURCE))
-	
+
 	'''
 	for elem in bsd_syscall_list:
 		print elem
@@ -239,7 +239,7 @@ def generate_html():
 	html += "\t</tr>\n"
 
 	for elem in bsd_syscall_list:
-		
+
 		# Corner case where we have #define
 		# The loop takes care of blank cells in the table
 		if elem[0].startswith('#'):
@@ -286,17 +286,17 @@ def generate_html():
 	html += "</small>\n"
 	html += "</div>"
 	html += "\n</body>\n</html>"
-	
+
 	with open(OUTPUT_HTML, 'w') as fd:
 		fd.write(html)
-	
+
 	print "\tdone"
 
 def main():
 	# Kung-foo for BSD syscalls
 	# bsd_syscall_list contains not only syscalls but also #defines!
 	make_temp_bsd()
-	global bsd_syscall_list 
+	global bsd_syscall_list
 	bsd_syscall_list = bsd_list_generate()
 
 	# Find what is the highest number of arguments
@@ -322,7 +322,7 @@ if __name__ == "__main__":
 		sys.exit(1)
 
 	PATH_XNU_SOURCE = sys.argv[1]
-	URL_XNU_SOURCE = "http://www.opensource.apple.com/source/xnu/xnu-3248.20.55/"
+	URL_XNU_SOURCE = "http://opensource.apple.com/source/xnu/xnu-3248.40.184/"
 	PATH_EXUBERANT_CTAGS = "/usr/local/Cellar/ctags/5.8_1/bin/ctags"
 	PATH_BSD_SYSCALLS = PATH_XNU_SOURCE + "bsd/kern/syscalls.master"
 	PATH_BSD_TEMP_FILE = "/tmp/bsd-syscall-tmp"
