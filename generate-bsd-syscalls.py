@@ -322,7 +322,7 @@ if __name__ == "__main__":
 		sys.exit(1)
 
 	PATH_XNU_SOURCE = sys.argv[1]
-	URL_XNU_SOURCE = "http://opensource.apple.com/source/xnu/xnu-3248.50.21/"
+	URL_XNU_SOURCE = "http://opensource.apple.com/source/xnu/xnu-3248.60.10/"
 	PATH_EXUBERANT_CTAGS = "/usr/local/Cellar/ctags/5.8_1/bin/ctags"
 	PATH_BSD_SYSCALLS = PATH_XNU_SOURCE + "bsd/kern/syscalls.master"
 	PATH_BSD_TEMP_FILE = "/tmp/bsd-syscall-tmp"
@@ -337,6 +337,6 @@ if __name__ == "__main__":
 	BANNER += "<p>Generated from <i><a href=\"" + URL_XNU_SOURCE + "\">" + v1.upper() + "</a></i> on <i>" + v2 + "</i> by " + github + ".</p>\n"
 	BANNER += "<p>Description for <a href=\"osx-bsd-syscalls.json\">JSON dump</a> elements (apart from <i>conditionals</i>):</p>"
 	BANNER += "<pre>[\n\tsyscall number,\n\treturn type,\n\tsyscall name,\n\tnumber of args,\n\targ 1, ..., arg n,\n\tsource\n]</pre>"
-	BANNER += "<p>Feedback, ideas, bugs, <i>et cetera</i> &#8211; <a href=\"https://dyjakan.sigsegv.pl/pages/about.html\">give me a shout</a>.</p>\n"
+	BANNER += "<p>Feedback, ideas, bugs, <i>et cetera</i> &#8211; <a href=\"https://dyjakan.sigsegv.pl\">give me a shout</a>.</p>\n"
 
 	main()
