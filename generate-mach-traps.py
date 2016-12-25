@@ -313,7 +313,7 @@ if __name__ == "__main__":
 		sys.exit(1)
 
 	PATH_XNU_SOURCE = sys.argv[1]
-	URL_XNU_SOURCE = "https://opensource.apple.com/source/xnu/xnu-3789.1.32/"
+	URL_XNU_SOURCE = "https://opensource.apple.com/source/xnu/xnu-3789.21.4/"
 	PATH_EXUBERANT_CTAGS = "/usr/local/Cellar/ctags/5.8_1/bin/ctags"
 	PATH_MACH_TRAPS = PATH_XNU_SOURCE + "osfmk/kern/syscall_sw.c"
 	PATH_MACH_TRAPS_ARGS = PATH_XNU_SOURCE + "osfmk/mach/mach_traps.h"
