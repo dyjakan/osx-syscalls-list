@@ -196,37 +196,40 @@ def generate_json():
 def generate_html():
 	print "[+] Generating HTML output..."
 
-	html = '''
-<!DOCTYPE html>
+	html = '''<!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="utf-8">
-    <title>OS X MACH Traps Reference</title>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body>
+    <meta name="description" content="macOS (xnu) MACH traps reference table.">
+    <meta name="keywords" content="Apple, macOS, OS X, OSX, XNU, MACH, traps, system calls, OS internals, reference, low level, programming, c, c++, assembler, kernel, reverse engineering, malware analysis">
+    <meta name="author" content="Andrzej Dyjak, dyjakan">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>macOS MACH Traps</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  </head>
+  <body>
 '''
 
 	html += "<div class=\"container-fluid\">\n"
 	html += BANNER
-	html += "<small>\n"
-	html += "\t<table class=\"table table-condensed table-hover\">\n"
+	html += "\t<table class=\"table table-sm table-hover\">\n"
 
-	# This is legend!
-	html += "\t<tr class=\"active\">\n"
-	html += "\t\t<th>" + "#" + "</th>\n"
-	html += "\t\t<th>" + "Name" + "</th>\n"
-	html += "\t\t<th>" + "arg 1" + "</th>\n"
-	html += "\t\t<th>" + "arg 2" + "</th>\n"
-	html += "\t\t<th>" + "arg 3" + "</th>\n"
-	html += "\t\t<th>" + "arg 4" + "</th>\n"
-	html += "\t\t<th>" + "arg 5" + "</th>\n"
-	html += "\t\t<th>" + "arg 6" + "</th>\n"
-	html += "\t\t<th>" + "arg 7" + "</th>\n"
-	html += "\t\t<th>" + "arg 8" + "</th>\n"
-	html += "\t\t<th>" + "Munger" + "</th>\n"
-	html += "\t\t<th>" + "Source" + "</th>\n"
-	html += "\t</tr>\n"
+	html += "\t<thead class=\"thead-inverse\">\n"
+	html += "\t\t<tr>\n"
+	html += "\t\t\t<th>" + "#" + "</th>\n"
+	html += "\t\t\t<th>" + "Name" + "</th>\n"
+	html += "\t\t\t<th>" + "Arg#1" + "</th>\n"
+	html += "\t\t\t<th>" + "Arg#2" + "</th>\n"
+	html += "\t\t\t<th>" + "Arg#3" + "</th>\n"
+	html += "\t\t\t<th>" + "Arg#4" + "</th>\n"
+	html += "\t\t\t<th>" + "Arg#5" + "</th>\n"
+	html += "\t\t\t<th>" + "Arg#6" + "</th>\n"
+	html += "\t\t\t<th>" + "Arg#7" + "</th>\n"
+	html += "\t\t\t<th>" + "Arg#8" + "</th>\n"
+	html += "\t\t\t<th>" + "Munger" + "</th>\n"
+	html += "\t\t\t<th>" + "Implementation" + "</th>\n"
+	html += "\t\t</tr>\n"
+	html += "\t</thead>\n"
 
 	for trap in mach_traps_list:
 
@@ -271,9 +274,14 @@ def generate_html():
 		html += "\t</tr>\n"
 
 	html += "\t</table>\n"
-	html += "</small>\n"
 	html += "</div>"
-	html += "\n</body>\n</html>"
+	html += '''
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  </body>
+</html>
+'''
 
 	with open(OUTPUT_HTML, 'w') as fd:
 		fd.write(html)
@@ -321,7 +329,7 @@ if __name__ == "__main__":
 	OUTPUT_HTML = "osx-mach-traps.html"
 
 	# mention: timestamp, original list from XNU sources, name/handle/email
-	BANNER = "<h1>OS X MACH Traps Reference</h1>\n"
+	BANNER = "<h1>macOS MACH Traps</h1>\n"
 	v1 = PATH_XNU_SOURCE[PATH_XNU_SOURCE.find("xnu-"):]
 	v2 = datetime.datetime.now().strftime("%A, %d %B %Y")
 	github = "<a href=\"https://github.com/dyjakan\">@dyjakan</a>"
