@@ -207,43 +207,46 @@ def generate_json():
 def generate_html():
 	print "[+] Generating HTML output..."
 
-	html = '''
-<!DOCTYPE html>
+	html = '''<!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="utf-8">
-	<title>OS X BSD System Calls Reference</title>
-	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="macOS (xnu) BSD system calls reference table.">
+    <meta name="keywords" content="Apple, macOS, OS X, OSX, XNU, BSD, system calls, OS internals, reference, low level, programming, c, c++, assembler, kernel, reverse engineering, malware analysis">
+    <meta name="author" content="Andrzej Dyjak, dyjakan">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>macOS BSD System Calls</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  </head>
+  <body>
 '''
 
 	html += "<div class=\"container-fluid\">\n"
 	html += BANNER
-	html += "<small>\n"
-	html += "\t<table class=\"table table-condensed table-hover\">\n"
+	html += "\t<table class=\"table table-sm table-hover\">\n"
 
-	# This is legend!
-	html += "\t<tr class=\"active\">\n"
-	html += "\t\t<th>" + "#" + "</th>\n"
-	html += "\t\t<th>" + "Name" + "</th>\n"
-	html += "\t\t<th>" + "rdi" + "</th>\n"
-	html += "\t\t<th>" + "rsi" + "</th>\n"
-	html += "\t\t<th>" + "rdx" + "</th>\n"
-	html += "\t\t<th>" + "rcx" + "</th>\n"
-	html += "\t\t<th>" + "r8" + "</th>\n"
-	html += "\t\t<th>" + "r9" + "</th>\n"
-	html += "\t\t<th>" + "stack" + "</th>\n"
-	html += "\t\t<th>" + "stack" + "</th>\n"
-	html += "\t\t<th>" + "Source" + "</th>\n"
-	html += "\t</tr>\n"
+	html += "\t<thead class=\"thead-inverse\">\n"
+	html += "\t\t<tr>\n"
+	html += "\t\t\t<th>" + "#" + "</th>\n"
+	html += "\t\t\t<th>" + "Name" + "</th>\n"
+	html += "\t\t\t<th>" + "RDI" + "</th>\n"
+	html += "\t\t\t<th>" + "RSI" + "</th>\n"
+	html += "\t\t\t<th>" + "RDX" + "</th>\n"
+	html += "\t\t\t<th>" + "RCX" + "</th>\n"
+	html += "\t\t\t<th>" + "R8" + "</th>\n"
+	html += "\t\t\t<th>" + "R9" + "</th>\n"
+	html += "\t\t\t<th>" + "Stack" + "</th>\n"
+	html += "\t\t\t<th>" + "Stack" + "</th>\n"
+	html += "\t\t\t<th>" + "Implementation" + "</th>\n"
+	html += "\t\t</tr>\n"
+	html += "\t</thead>\n"
 
 	for elem in bsd_syscall_list:
 
 		# Corner case where we have #define
 		# The loop takes care of blank cells in the table
 		if elem[0].startswith('#'):
-			html += "\t<tr class=\"warning\">\n"
+			html += "\t<tr class=\"table-info\">\n"
 			html += "\t\t<td>" + elem[0] + "</td>\n"
 
 			# Result of this loop is connected with try/except later; remember!
@@ -283,9 +286,14 @@ def generate_html():
 		html += "\t</tr>\n"
 
 	html += "\t</table>\n"
-	html += "</small>\n"
 	html += "</div>"
-	html += "\n</body>\n</html>"
+	html += '''
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  </body>
+</html>
+'''
 
 	with open(OUTPUT_HTML, 'w') as fd:
 		fd.write(html)
@@ -330,7 +338,7 @@ if __name__ == "__main__":
 	OUTPUT_HTML = "osx-bsd-syscalls.html"
 
 	# mention: timestamp, original list from XNU sources, name/handle/email
-	BANNER = "<h1>OS X BSD System Calls Reference</h1>\n"
+	BANNER = "<h1>macOS BSD System Calls</h1>\n"
 	v1 = PATH_XNU_SOURCE[PATH_XNU_SOURCE.find("xnu-"):]
 	v2 = datetime.datetime.now().strftime("%A, %d %B %Y")
 	github = "<a href=\"https://github.com/dyjakan\">@dyjakan</a>"
