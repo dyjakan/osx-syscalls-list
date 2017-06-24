@@ -332,8 +332,8 @@ if __name__ == "__main__":
 	BANNER = "<h1>macOS MACH Traps</h1>\n"
 	v1 = PATH_XNU_SOURCE[PATH_XNU_SOURCE.find("xnu-"):]
 	ts = datetime.datetime.now().strftime("%A, %d %B %Y")
-	github = "<a href=\"https://github.com/dyjakan\">@dyjakan</a>"
-	BANNER += "<p>Generated from <i><a href=\"" + URL_XNU_SOURCE + "\">" + v1.upper() + "</a></i> on <i>" + ts + "</i> by " + github + ".</p>\n"
+	twitter = "<a href=\"https://twitter.com/andrzejdyjak\">@andrzejdyjak</a>"
+	BANNER += "<p>Generated from <i><a href=\"" + URL_XNU_SOURCE + "\">" + v1.upper() + "</a></i> on <i>" + ts + "</i> by " + twitter + ".</p>\n"
 	BANNER += "<p>Description for <a href=\"osx-mach-traps.json\">JSON dump</a> elements:</p>"
 	BANNER += "<pre>[\n\ttrap number,\n\treturn type,\n\ttrap name,\n\tnumber of args,\n\thow wide argument structure is (in 32-bit words; it's related to munger),\n\targ 1, ..., arg n,\n\tmunger,\n\tsource\n]</pre>"
 	BANNER += "<p>You can find github repository <a href=\"https://github.com/dyjakan/osx-syscalls-list\">here</a>. Feedback, ideas, bugs, <i>et cetera</i> &#8211; <a href=\"https://sigsegv.pl\">give me a shout</a>.</p>\n"

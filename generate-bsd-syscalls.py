@@ -341,7 +341,7 @@ if __name__ == "__main__":
 	BANNER = "<h1>macOS BSD System Calls</h1>\n"
 	v1 = PATH_XNU_SOURCE[PATH_XNU_SOURCE.find("xnu-"):]
 	ts = datetime.datetime.now().strftime("%A, %d %B %Y")
-	github = "<a href=\"https://github.com/dyjakan\">@dyjakan</a>"
+	github = "<a href=\"https://twitter.com/andrzejdyjak\">@andrzejdyjak</a>"
 	BANNER += "<p>Generated from <i><a href=\"" + URL_XNU_SOURCE + "\">" + v1.upper() + "</a></i> on <i>" + ts + "</i> by " + github + ".</p>\n"
 	BANNER += "<p>Description for <a href=\"osx-bsd-syscalls.json\">JSON dump</a> elements (apart from <i>conditionals</i>):</p>"
 	BANNER += "<pre>[\n\tsyscall number,\n\treturn type,\n\tsyscall name,\n\tnumber of args,\n\targ 1, ..., arg n,\n\tsource\n]</pre>"
